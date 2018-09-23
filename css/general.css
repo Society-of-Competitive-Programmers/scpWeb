@@ -7,6 +7,7 @@ nav {
     background-color: #0a378b;
     
 }
+
 nav a span {
     color: white;
     font-family: 'Orbitron', sans-serif; 
@@ -33,16 +34,16 @@ nav div ul li {
 }
 
 /* Content */
-.container {
+
+ #content {
     min-height: 70%;
-    min-height: -webkit-calc(100% - 100px);
-    min-height: -moz-calc(100% - 100px);
-    min-height: calc(100% - 100px);
-}
+    min-height: -webkit-calc(100% - 96px);
+    min-height: -moz-calc(100% - 96px);
+    min-height: calc(100% - 96px);
+} 
 
 /* Footer */
 .footer {
-    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;

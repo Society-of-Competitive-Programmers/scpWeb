@@ -1,3 +1,4 @@
+/* title */
 #title {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -8,14 +9,14 @@
     padding: 30px 0;
 }
 
-#title> div {
+#title > div {
     box-shadow: 0 .25rem 0.5rem rgba(0,0,0,.15)!important
 }
-
 
 /* Carousel (Slideshow) */
 #carouselExampleIndicators {
     background-color: grey;
+    margin-bottom: 20px;
 }
 
 .carousel-inner {
@@ -25,4 +26,28 @@
 
 #carouselExampleIndicators div div img{
     height: 300px;
+}
+
+/* sumBoxes */
+#sumBoxContainer{
+    padding-bottom: 30px;
+}
+
+#sumBoxContainer .row{
+    padding-bottom: 20px;
+}
+
+.sumBox .card{
+    border: 0;
+}
+
+.sumBox .card .card-header {
+    background-color: #0a378b;
+    color: white;
+    font-family: 'Orbitron', 'sans-serif';
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.sumBox .card .card-body {
+    border: 1px solid rgba(0,0,0,.125);
 }

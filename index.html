@@ -1,44 +1,48 @@
 <html>
   <head>
-      <title>Society of Competitive Programmers</title>
+    <title>Society of Competitive Programmers</title>
+    
+    <!-- Bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <!-- CSS external links -->
-      <link rel="stylesheet" href="css/general.css">
-      <link rel="stylesheet" href="css/index.css">
-      <!-- Bootstrap and jQuery -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS external links -->
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/index.js"></script>
   </head>
   <body>
     <div id="content" >
       <!-- Navbar -->
       <nav class="navbar shadow sticky-top navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="./index.html" class="d-inline-block align-top">
-            <img src="images/Winnah Man.png" height="45" width="45" alt="">
-            <span>Society of Competitive Programmers</span>
+          <img src="images/scpPossLogo.png" height="45" width="87.363834422657952" alt="">
+          <span>Society of Competitive Programmers</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-          </ul>
+          <ul class="navbar-nav ml-auto"></ul>
           <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Home</a>
+              </li>
             <li class="nav-item">
-              <a class="nav-link" href="./About.html">About</a>
+              <a class="nav-link" href="./about.html">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./Expo.html">Expo</a>
+              <a class="nav-link" href="./expo.html">Expo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./Schedule.html">Schedule</a>
+              <a class="nav-link" href="./schedule.html">Schedule</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./Contact.html">Contact</a>
+              <a class="nav-link" href="./contact.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -46,16 +50,16 @@
 
       <!-- Content -->
       <div class="container">
-          <!-- Title -->
+        <!-- Title -->
         <div id="title" class="d-flex justify-content-center">
           <div class="rounded card col-11">
             <div class="card-body">
-                Society of Competitive Programmers
+              Society of Competitive Programmers
             </div>
           </div>
         </div>
 
-          <!-- Carousel (Slideshow) -->
+        <!-- Carousel (Slideshow) -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -84,33 +88,41 @@
         </div>
         
         <!-- sumBoxes Cards -->
-        <div id="sumBoxContainer"  >
+        <div id="sumBoxContainer">
           <!-- Next Two Meetings Descr. -->
-          <div class="row ">
+          <div class="row">
             <div class="sumBox col-6">
               <div class="card">
-                  <div class="card-header">
-                      <img src="images/EditedActLogo.png" height="45" width="45" alt="" style="background-color:grey; border-radius: 2px;"> (Insert Workshop Name Here) Workshop
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+                <div class="card-header">
+                  <img src="images/Winnah Man.png" height="45" width="45" alt=""> First Upcoming Meeting
                 </div>
+                <div class="card-body">
+                  <h5 class="card-title">(Insert Meeting Name Here)</h5>
+                  <p class="card-text">
+                    Date: <span class="meetDate"></span>--/--/--<br>
+                    Room: <span class="meetRoom">TBD</span><br>
+                    Description: <span class="meetDsc">...</span>
+                  </p>
+                  <a href="#" class="btn">Learn More</a>
+                </div>
+              </div>
             </div>
 
             <div class="sumBox col-6">
                 <div class="card">
-                    <div class="card-header">
-                        <img src="images/EditedActLogo.png" height="45" width="45" alt="" style="background-color:grey; border-radius: 2px;"> (Insert Workshop Name Here) Workshop
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
+                  <div class="card-header">
+                    <img src="images/Winnah Man.png" height="45" width="45" alt="" style="background-color:grey; border-radius: 2px;"> Second Upcoming Meeting
                   </div>
+                  <div class="card-body">
+                    <h5 class="card-title">(Insert Name Meeting Here)</h5>
+                    <p class="card-text">
+                      Date: <span class="meetDate">--/--/--</span><br>
+                      Room: <span class="meetRoom">TBD</span><br>
+                      Description: <span class="meetDsc">...</span>
+                    </p>
+                    <a href="#" class="btn">Learn More</a>
+                  </div>
+                </div>
             </div>
           </div>
 
@@ -119,25 +131,32 @@
             <div class="sumBox col-6">
               <div class="card">
                 <div class="card-header">
-                    <img src="images/EditedActLogo.png" height="45" width="45" alt=""> About SCP
+                    <img src="images/scpPossLogo.png" height="45" width="87.363834422657952" alt=""> About SCP
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Description</h5>
+                  <p class="card-text">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    The Society of Competitive Programmers is dedicated to encouraging students to participate in programming competitions and hackathons. 
+                    We facilitate the formation and mentoring of teams by providing technical workshops and hands-on programming sessions...
+                  </p>
+                  <a href="./about.html" class="btn">Learn More</a>
                 </div>
               </div>
             </div>
 
             <div class="sumBox col-6">
                 <div class="card">
-                  <div class="card-header">
-                      <img src="images/EditedActLogo.png" height="45" width="45" alt=""> Engineering Expo
+                  <div class="sumBox2 card-header">
+                      <img src="images/SCP t-shirt wip3b.png" height="45" width="90" alt=""> Engineering Expo
                   </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <div class="sumBox2 card-body">
+                    <h5 class="card-title">What is the Engineering Expo?</h5>
+                    <p class="card-text">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        The Engineering Expo is...
+                    </p>
+                    <a href="./expo.html" class="btn">Learn More</a>
                   </div>
                 </div>
             </div>
@@ -148,27 +167,39 @@
             <div class="sumBox col-6">
               <div class="card">
                 <div class="card-header">
-                    <img src="images/Winnah Man.png" height="45" width="45" alt=""> Schedule
+                    <img src="images/EditedActLogo.png" height="45" width="45" alt="" style="background-color:grey; border-radius: 2px;"> Schedule
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Fall 2018 Event Schedule</h5>
+                  <p class="card-text">
+                    (Stuff)
+                  </p>
+                  <a href="./schedule.html" class="btn">Learn More</a>
                 </div>
               </div>
             </div>
   
             <div class="sumBox col-6">
-                <div class="card">
-                  <div class="card-header">
-                      <img src="images/Winnah Man.png" height="45" width="45" alt=""> Contact Us
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+              <div class="card">
+                <div class="card-header">
+                  <img src="images/EditedActLogo.png" height="45" width="45" alt="" style="background-color:grey; border-radius: 2px;"> Contact Us
                 </div>
+                <div class="card-body">
+                  <h5 class="card-title">Where to find us</h5>
+                  <p class="card-text">
+                    Bullsync: <a href="https://orgsync.com/170075/chapter">https://orgsync.com/170075/chapter</a>
+                    <br>
+                    Slack: <a href="https://usfscp.slack.com/messages/">https://usfscp.slack.com/messages/</a>
+                    <br>
+                    Facebook: <a href="https://www.facebook.com/usfscp18/">https://www.facebook.com/usfscp18/</a>
+                    <br>
+                    Github: <a href="https://github.com/Society-of-Competitive-Programmers">https://github.com/Society-of-Competitive-Programmers</a>
+                    <br>
+                    Youtube: <a href="https://www.youtube.com/channel/UCe0cW5tHVbAgb8e5YzORX9Q">https://www.youtube.com/channel/UCe0cW5tHVbAgb8e5YzORX9Q</a>
+                  </p>
+                  <a href="./contact.html" class="btn">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

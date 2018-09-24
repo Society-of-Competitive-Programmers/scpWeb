@@ -5,15 +5,19 @@ nav {
     /* Blue nav: #0a378b 
        Red  nav: #aa040f */
     background-color: #0a378b;
-    
 }
 
 nav a span {
     color: white;
     font-family: 'Orbitron', sans-serif; 
+    font-weight: 900;
     font-size: 18px;
     position: relative;
     top: 3px;
+}
+
+nav a span:hover {
+    color: #FEC108 !important;
 }
 
 nav div ul li a {
@@ -28,18 +32,25 @@ nav div ul li a:hover {
     color: #FEC108 !important;
 }
 
+nav div ul li .active {
+    color: #FEC108 !important;
+}
+
 nav div ul li {
-    margin-left: 2px;
-    margin-right: 2px;
+    margin: 0 2px;
 }
 
 /* Content */
  #content {
-    min-height: 70%;
+    min-height: 100%;
     min-height: -webkit-calc(100% - 96px);
     min-height: -moz-calc(100% - 96px);
     min-height: calc(100% - 96px);
 } 
+
+.container {
+    padding: 0;
+}
 
 /* Footer */
 #footer {

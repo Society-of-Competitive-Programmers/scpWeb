@@ -1,4 +1,4 @@
-/* title */
+/* Title */
 #title {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -10,22 +10,23 @@
 }
 
 #title > div {
-    box-shadow: 0 .25rem 0.5rem rgba(0,0,0,.15)!important
+    box-shadow: 0 .25rem 0.5rem rgba(0,0,0,.15) !important;
 }
 
 /* Carousel (Slideshow) */
 #carouselExampleIndicators {
-    background-color: grey;
+    background: rgb(211,211,211);
+    background: radial-gradient(circle, rgba(211,211,211,1) 0%, rgba(128,128,128,1) 100%);
     margin-bottom: 20px;
 }
 
 .carousel-inner {
-    height: 300px;
-    width: 600px;
+    height: 350px;
+    width: 100%;
 }
 
 #carouselExampleIndicators div div img{
-    height: 300px;
+    height: 350px;
 }
 
 /* sumBoxes */
@@ -50,4 +51,28 @@
 
 .sumBox .card .card-body {
     border: 1px solid rgba(0,0,0,.125);
+    padding-bottom: 58px;
+}
+
+.sumBox .card .card-body .btn {
+    background-color: #aa040f;
+    border-color: #aa040f;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.sumBox .card-text a {
+    color: orange;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.sumBox .card-text a:hover {
+    color: #FEC108;
+}
+
+.sumBox .card-body .btn:hover {
+    color: #FEC108;
 }

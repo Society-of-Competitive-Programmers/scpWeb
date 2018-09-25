@@ -76,3 +76,11 @@
 .sumBox .card-body .btn:hover {
     color: #FEC108;
 }
+
+@media only screen and (max-width: 767px) {
+    .sumBox, .col-6 {
+        max-width: 100% !important;
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}

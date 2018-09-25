@@ -5,6 +5,7 @@ nav {
     /* Blue nav: #0a378b 
        Red  nav: #aa040f */
     background-color: #0a378b;
+    width: 100%;
 }
 
 nav a span {
@@ -62,6 +63,7 @@ nav div ul li {
     color: white;
     text-align: center;
     padding: 2em 0;
+    width: 100%;
  }
  
  #footer .fa {

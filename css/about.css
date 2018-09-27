@@ -1,0 +1,71 @@
+/* Title */
+#title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #FEC108;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
+    padding: 30px 0;
+}
+
+#title > div {
+    box-shadow: 0 .25rem 0.5rem rgba(0,0,0,.15) !important;
+}
+
+/* sumBoxes */
+#sumBoxContainer{
+    padding-bottom: 30px;
+}
+
+#sumBoxContainer .row{
+    padding-bottom: 35px;
+}
+
+.sumBox .card{
+    border: 0;
+}
+
+.sumBox .card .card-header {
+    background-color: #0a378b;
+    color: white;
+    font-family: 'Orbitron', 'sans-serif';
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.sumBox .card .card-body {
+    border: 1px solid rgba(0,0,0,.125);
+    padding-bottom: 58px;
+}
+
+.headerLink {
+    font-weight: bold;
+    color: #aa040f;
+}
+
+.headerLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sumBox .card .card-body .btn {
+    background-color: #aa040f;
+    border-color: #aa040f;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.sumBox .card-text a {
+    color: orange;
+    font-weight: bold;
+}
+
+.sumBox .card-text a:hover {
+    color: #FEC108;
+}
+
+.sumBox .card-body .btn:hover {
+    color: #FEC108;
+}

@@ -69,3 +69,12 @@
 .sumBox .card-body .btn:hover {
     color: #FEC108;
 }
+
+#adEmail {
+    color: orange;
+}
+
+.pts {
+    color: orange;
+    font-weight: bold;
+}

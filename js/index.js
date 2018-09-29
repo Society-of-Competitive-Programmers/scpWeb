@@ -3,6 +3,7 @@ $(document).ready(function(){
     reSizeSumBoxes();
 });
 
+//When window size is changed
 $(window).resize(function(){
     reSizeSumBoxes();
 });
@@ -10,12 +11,12 @@ $(window).resize(function(){
 /* UI Experience */
 //Makes every sumBox in the same row the same height
 function reSizeSumBoxes() {
-    for(let i = 1; i <= $('#sumBoxContainer > div').length; i++) {
+    for(let i = 1; i <= $('#sumBoxContainer > .row').length; i++) {
         $(sumBoxElement(i, 1)).css('height', ''); 
         $(sumBoxElement(i, 2)).css('height', '');
     }
 
-    for(let i = 1; i <= $('#sumBoxContainer > div').length; i++) {
+    for(let i = 1; i <= $('#sumBoxContainer > .row').length; i++) {
         if($(sumBoxElement(i, 1)).css('height') > $(sumBoxElement(i, 2)).css('height')) {
             $(sumBoxElement(i, 2)).css('height', $(sumBoxElement(i, 1)).css('height'));
         }

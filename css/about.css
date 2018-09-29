@@ -40,11 +40,11 @@
 
 .headerLink {
     font-weight: bold;
-    color: #aa040f;
+    color: #aa040f !important;
 }
 
 .headerLink:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
     cursor: pointer;
 }
 
@@ -57,13 +57,13 @@
     right: 20px;
 }
 
-.sumBox .card-text a {
-    color: orange;
-    font-weight: bold;
+.sumBox .card-text .evLink {
+    color: orange !important;
+    font-weight: bold !important;
 }
 
-.sumBox .card-text a:hover {
-    color: #FEC108;
+.sumBox .card-text .evLink:hover {
+    color: #FEC108 !important;
 }
 
 .sumBox .card-body .btn:hover {

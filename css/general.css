@@ -4,7 +4,7 @@
 nav {
     /* Blue nav: #0a378b 
        Red  nav: #aa040f */
-    background-color: #0a378b;
+    background-color: #000DCB;
     width: 100%;
 }
 
@@ -19,7 +19,7 @@ nav a span {
 }
 
 nav a span:hover {
-    color: #FEC108 !important;
+    color: #FFC601 !important;
 }
 
 nav div ul li a {
@@ -31,11 +31,11 @@ nav div ul li a {
 }
 
 nav div ul li a:hover {
-    color: #FEC108 !important;
+    color: #FFC601 !important;
 }
 
 nav div ul li .active {
-    color: #FEC108 !important;
+    color: #FFC601 !important;
 }
 
 nav div ul li {
@@ -59,7 +59,7 @@ nav div ul li {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #aa040f;
+    background-color: #FF0000;
     color: white;
     text-align: center;
     padding: 2em 0;

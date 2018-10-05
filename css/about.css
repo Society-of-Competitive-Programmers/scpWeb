@@ -27,7 +27,7 @@
 }
 
 .sumBox .card .card-header {
-    background-color: #0a378b;
+    background-color: #000DCB;
     color: white;
     font-family: 'Orbitron', 'sans-serif';
     border: 1px solid rgba(0,0,0,.125);
@@ -40,7 +40,7 @@
 
 .headerLink {
     font-weight: bold;
-    color: #aa040f !important;
+    color: #FF0000 !important;
 }
 
 .headerLink:hover {
@@ -49,8 +49,8 @@
 }
 
 .sumBox .card .card-body .btn {
-    background-color: #aa040f;
-    border-color: #aa040f;
+    background-color: #FF0000;
+    border-color: #FF0000;
     color: white;
     position: absolute;
     bottom: 20px;

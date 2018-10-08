@@ -19,23 +19,23 @@ nav a span {
 }
 
 nav a span:hover {
-    color: #FFC601 !important;
+    color: rgb(255, 215, 69) !important;
 }
 
 nav div ul li a {
     color: white !important;
     font-family: 'Orbitron', sans-serif; 
-    font-size: 16px;
+    font-size: 18px;
     position: relative;
-    top: 4px;
+    top: 3px;
 }
 
 nav div ul li a:hover {
-    color: #FFC601 !important;
+    color: rgb(255, 215, 69) !important;
 }
 
 nav div ul li .active {
-    color: #FFC601 !important;
+    color: rgb(255, 215, 69) !important;
 }
 
 nav div ul li {

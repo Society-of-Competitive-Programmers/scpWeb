@@ -40,6 +40,7 @@
 
 .sumBox .card{
     border: 0;
+    margin-bottom: 20px;
 }
 
 .sumBox .card .card-header {

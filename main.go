@@ -21,6 +21,7 @@ func init() {
 	http.HandleFunc("/contact", contact)
 	http.HandleFunc("/expo", expo)
 	http.HandleFunc("/schedule", schedule)
+	http.HandleFunc("/spotlight", spotlight)
 
 	http.Handle("/src/", http.StripPrefix("/src/", http.FileServer(http.Dir("src"))))
 
@@ -89,6 +90,20 @@ func schedule(w http.ResponseWriter, r *http.Request) {
 	}
 
 	err := tmpl.ExecuteTemplate(w, "schedule.html", pd)
+
+	if err != nil {
+		log.Println(err)
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+}
+
+func spotlight(w http.ResponseWriter, r *http.Request) {
+	pd := pageData{
+		Title: "Spotlight",
+	}
+
+	err := tmpl.ExecuteTemplate(w, "spotlight.html", pd)
 
 	if err != nil {
 		log.Println(err)

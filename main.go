@@ -124,11 +124,12 @@ func spotlight(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return
 	}
+
 	// ctx := context.Background()
 
-	// // For API packages whose import path is starting with "cloud.google.com/go",
-	// // such as cloud.google.com/go/storage in this case, if there are no credentials
-	// // provided, the client library will look for credentials in the environment.
+	// // // For API packages whose import path is starting with "cloud.google.com/go",
+	// // // such as cloud.google.com/go/storage in this case, if there are no credentials
+	// // // provided, the client library will look for credentials in the environment.
 	// creds, err := google.FindDefaultCredentials(ctx, storage.ScopeReadOnly)
 	// if err != nil {
 	// 	log.Fatal(err)

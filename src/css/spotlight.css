@@ -1,0 +1,17 @@
+.center {
+    display: block;
+    margin-left: 20;
+    margin-right: 20;
+    margin-top: 20;
+    margin-bottom: 20;
+  }
+
+.header {
+    background-color: #0a378b;
+}
+
+.title {
+    color: white;
+    font-family: 'Orbitron', 'sans-serif';
+    border: 1px solid rgba(0,0,0,.125);
+}

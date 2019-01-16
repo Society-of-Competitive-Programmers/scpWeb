@@ -27,7 +27,7 @@ type pageData struct {
 	PageName string
 }
 
-func init() {
+func main() {
 	tmpl = template.Must(template.ParseGlob("pub/*.html"))
 
 	http.HandleFunc("/", index)
@@ -39,7 +39,7 @@ func init() {
 
 	http.Handle("/src/", http.StripPrefix("/src/", http.FileServer(http.Dir("src"))))
 
-	//log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func index(w http.ResponseWriter, r *http.Request) {

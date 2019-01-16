@@ -1,15 +1,13 @@
-﻿<!DOCTYPE html>
+<html>
+    <head>
+        {{template "head"}}
+    </head>
+    <body>
+        {{template "header"}}
+        {{template "title" .}}
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    {{ template "head" }}
-    <link rel="stylesheet" href="css/about.css">
-    <script type="text/javascript" src="js/about.js"></script>
-</head>
-<body>
-    {{ template "header" }}
-    {{ template "title" .}}
-   
-    {{template "footer"}}
-</body>
+        
+    
+        {{template "footer"}}
+    </body>
 </html>

@@ -1,11 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:700,900');
 
+
+
+
 body {
     background: rgb(244,246,252);
     background: radial-gradient(circle, rgba(244,246,252,1) 0%, rgba(244,246,252,1) 50%, rgba(196,211,237,1) 100%);
     
      
 }
+
+/* Title */
+#title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #FEC108;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
+    padding: 30px 0;
+}
+
+#title > div {
+    box-shadow: 0 .25rem 0.5rem rgba(0,0,0,.15) !important;
+}
+
+
 
 /* Navbar */
 nav {

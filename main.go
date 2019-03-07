@@ -216,9 +216,7 @@ func spotlight(w http.ResponseWriter, r *http.Request) {
 // 	pd = pageData{
 // 		Title: "It works",
 // 	}
-// }
 
-// err = tmpl.ExecuteTemplate(w, "spotlight.html", pd)
 
 // if err != nil {
 // 	log.Println(err)

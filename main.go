@@ -1,237 +1,82 @@
 package main
 
-//Project-Id: scp-website-227103
-
 import (
-	//"google.golang.org/api/calendar/v3"
-	//"encoding/json"
-	//"fmt"
-	"html/template"
 	"log"
 	"net/http"
-	//"os"
-	//"reflect"
-	//"time"
-	//"golang.org/x/net/context"
-	//"golang.org/x/oauth2"
-	//"golang.org/x/oauth2/google"
-	//"google.golang.org/api/gmail/v1"
-	//"cloud.google.com/go/storage"
-	//"google.golang.org/api/cloudkms/v1"
+	"os"
+
+	"github.com/gin-contrib/static"
+	"github.com/gin-gonic/gin"
 )
 
-var tmpl *template.Template
+/* Change to init when Deploying */
+func init() {
+	//Initializing variables
+	router := gin.Default()
+	const staticDirPath string = "./scpWeb-ui/dist/scpWeb-ui"
 
-type pageData struct {
-	Title    string
-	PageName string
-}
-
-func main() { //main (debug) -> init(deploy) //gcloud app deploy from within the gcloud terminal
-	tmpl = template.Must(template.ParseGlob("pub/*.html"))
-
-	http.HandleFunc("/", index)
-	http.HandleFunc("/about", about)
-	http.HandleFunc("/contact", contact)
-	http.HandleFunc("/expo", expo)
-	http.HandleFunc("/schedule", schedule)
-	http.HandleFunc("/spotlight", spotlight)
-
-	http.Handle("/src/", http.StripPrefix("/src/", http.FileServer(http.Dir("src"))))
-
-	log.Fatal(http.ListenAndServe(":8080", nil))
-	//comment to deploy ^
-}
-
-func index(w http.ResponseWriter, r *http.Request) {
-	pd := pageData{
-		Title: "Society of Competitive Programmers",
+	//Getting Port #
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+		log.Printf("Defaulting to port %s", port)
 	}
 
-	err := tmpl.ExecuteTemplate(w, "index.html", pd)
+	//Host Static Angular Page
+	router.Use(static.Serve("/", static.LocalFile(staticDirPath, false)))
 
+	//Mapping GET Requests
+	router.GET("/spotlightInfo", getSpotlightInfo)
+	router.GET("/upcomingHackathons", getUpcomingHackathonInfo)
+	router.GET("/workshops", getWorkshopInfo)
+	router.GET("/hackathonPrep", getHackathonPrepInfo)
+
+	//If no route is met, redirect to home
+	router.NoRoute(func(c *gin.Context) {
+		c.Redirect(http.StatusMovedPermanently, "/")
+	})
+
+	//Running application
+	err := router.Run(":" + port)
 	if err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
+		panic(err)
 	}
 }
 
-func about(w http.ResponseWriter, r *http.Request) {
-	pd := pageData{
-		Title: "About Us",
-	}
+/* GET Requests */
+func getSpotlightInfo(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
 
-	err := tmpl.ExecuteTemplate(w, "about.html", pd)
+	var spotlightInfoArray = RetrieveSpotlightJSON()
 
-	if err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
+	c.JSON(http.StatusOK, spotlightInfoArray)
 }
 
-func contact(w http.ResponseWriter, r *http.Request) {
-	pd := pageData{
-		Title: "Contact Us",
-	}
+func getUpcomingHackathonInfo(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
 
-	err := tmpl.ExecuteTemplate(w, "contact.html", pd)
+	upcomingHackathonInfoArray := RetrieveHackathonInfo()
 
-	if err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
+	c.JSON(http.StatusOK, upcomingHackathonInfoArray)
 }
 
-func expo(w http.ResponseWriter, r *http.Request) {
-	pd := pageData{
-		Title: "Engineering Expo",
-	}
+func getWorkshopInfo(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
 
-	err := tmpl.ExecuteTemplate(w, "expo.html", pd)
+	workShopInfoArray := RetrieveInfoFromDrive("W")
 
-	if err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
+	c.JSON(http.StatusOK, workShopInfoArray)
 }
 
-func schedule(w http.ResponseWriter, r *http.Request) {
-	pd := pageData{
-		Title: "Schedule",
-	}
+func getHackathonPrepInfo(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
 
-	err := tmpl.ExecuteTemplate(w, "schedule.html", pd)
+	hackathonPrepInfoArray := RetrieveInfoFromDrive("HP")
 
-	if err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
+	c.JSON(http.StatusOK, hackathonPrepInfoArray)
+
 }
-
-func spotlight(w http.ResponseWriter, r *http.Request) {
-	pd := pageData{
-		Title: "Spotlight",
-	}
-
-	err := tmpl.ExecuteTemplate(w, "spotlight.html", pd)
-
-	if err != nil {
-		log.Println(err)
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-		return
-	}
-
-	// ctx := context.Background()
-
-	// // // For API packages whose import path is starting with "cloud.google.com/go",
-	// // // such as cloud.google.com/go/storage in this case, if there are no credentials
-	// // // provided, the client library will look for credentials in the environment.
-	// creds, err := google.FindDefaultCredentials(ctx, storage.ScopeReadOnly)
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-	// client, err := storage.NewClient(ctx, option.WithCredentials(creds))
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-	// fmt.Println("Buckets:")
-	// it := client.Buckets(ctx, "scp-website-227103")
-	// for {
-	// 	battrs, err := it.Next()
-	// 	if err == iterator.Done {
-	// 		break
-	// 	}
-	// 	if err != nil {
-	// 		log.Fatal(err)
-	// 	}
-	// 	fmt.Println(battrs.Name)
-	// }
-	// storageClient, err := storage.NewClient(ctx)
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-
-	// it := storageClient.Buckets(ctx, "scp-website-227103")
-	// for {
-	// 	bucketAttrs, err := it.Next()
-	// 	// if err == iterator.Done {
-	// 	// 	break
-	// 	// }
-	// 	if err != nil {
-	// 		log.Fatal(err)
-	// 	}
-	// 	fmt.Println
-	// 	(bucketAttrs.Name)
-}
-
-// For packages whose import path is starting with "google.golang.org/api",
-// such as google.golang.org/api/cloudkms/v1, use the
-// golang.org/x/oauth2/google package as shown below.
-// oauthClient, err := google.DefaultClient(ctx, cloudkms.CloudPlatformScope)
-// if err != nil {
-// 	log.Fatal(err)
-// }
-
-// srv, err := calendar.New(oauthClient)
-// if err != nil {
-// 	log.Fatal(err)
-// }
-
-// t := time.Now().Format(time.RFC3339)
-// events, err := srv.Events.List("primary").ShowDeleted(false).
-// 	SingleEvents(true).TimeMin(t).MaxResults(10).OrderBy("startTime").Do()
-// if err != nil {
-// 	log.Fatalf("Unable to retrieve next ten of the user's events: %v", err)
-// }
-// fmt.Println("Upcoming events:")
-// if len(events.Items) == 0 {
-// 	fmt.Println("No upcoming events found.")
-// } else {
-// 	for _, item := range events.Items {
-// 		// date := item.Start.DateTime
-// 		// if date == "" {
-// 		// 	date = item.Start.Date
-// 		// }
-// 		// fmt.Printf("%v (%v)\n", item.Summary, date)
-// 		fmt.Println("New Element: ")
-// 		t := reflect.TypeOf(item).Elem()
-// 		v := reflect.ValueOf(item).Elem()
-// 		for i := 0; i < t.NumField(); i++ {
-// 			fmt.Printf("%+v\n", t.Field(i))
-// 			fmt.Println(v.Field(i))
-// 		}
-// 	}
-// }
-
-// pd := pageData{
-// 	Title: "Spotlight",
-// }
-
-// if len(events.Items) == 0 {
-// 	pd = pageData{
-// 		Title: "It works",
-// 	}
-// }
-
-// err = tmpl.ExecuteTemplate(w, "spotlight.html", pd)
-
-// if err != nil {
-// 	log.Println(err)
-// 	http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-// 	return
-// }
-
-/* Google Cloud Auth */
-// implicit uses Application Default Credentials to authenticate.
-// func implicit() {
-
-// }
-
-// func main() {
-// 	implicit()
-// }

@@ -1,0 +1,40 @@
+
+<span class="pageTitle"> Spotlight&nbsp;<mat-icon style="color: #AF373D; font-size: 32px">assistant_photo</mat-icon></span>
+<mat-divider style="top: 15px; position: relative; margin: 0 20px ;"></mat-divider>
+<div class="" style="align-items: right; padding: 15px">
+
+    <!-- Spotlight Images -->
+    <div class="container" style="position: relative; top: 15px; width: 100%; align-items: right; margin: 0; padding: 0%" class="">
+        <div class="row" style="">
+        <div *ngFor="let data of spotlightInfo; let id = index" class="col-md-6 spotlights"  style="padding: 0; display: inline-block; margin: 25px 0">
+            <div class="col-md-11 col-11" style="padding: 0; margin: auto">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <mat-card-title>{{data.ProjectTitle}} <a *ngIf="data.LinkHref != ''" href="{{data.LinkHref}}"><mat-icon>link</mat-icon></a> </mat-card-title>
+                    <mat-card-subtitle>{{data.Team}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image 
+                    src="../../../assets/images/spotlight/{{data.ImageTitle}}"
+                    class="spotlightImages"
+                    >
+                <mat-card-content>
+                    <b style="font-size:15px">
+                        Hackathon: {{data.Hackathon}}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Date: {{data.HackathonDate}}
+                    <br>
+                    Award: {{data.Award}}
+                    
+                    <br>
+                    Description:</b><p> {{data.ProjectDesc}}</p>
+                    
+                    <br>
+                </mat-card-content>
+
+            </mat-card>
+        </div>
+
+        </div>
+        </div>
+    </div>
+</div>

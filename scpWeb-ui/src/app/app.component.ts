@@ -23,7 +23,8 @@ export class AppComponent implements OnInit {
     {name: "Home", icon: "home",path:"home"},
     {name: "About", icon: "info", path:"about"},
     {name: "Spotlight", icon:"assistant_photo", path:"spotlight"},
-    {name: "Contact Us", icon:"email", path:"contact-us"}
+    {name: "Contact Us", icon:"email", path:"contact-us"},
+    {name: "Hackathon Travel Form", icon:"home", path:"hackathon-travel-form"} // todo: checkout what icon is...
   ]
   loading = false;
   @ViewChild('sidenav', {static: true})

@@ -27,6 +27,7 @@ import { HomeComponent, DialogDataExampleDialog } from './pages/home/home.compon
 import { AboutComponent } from './pages/about/about.component';
 import { SpotlightComponent } from './pages/spotlight/spotlight.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
+import { HackathonTravelFormComponent } from './pages/hackathon-travel-form/hackathon-travel-form.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
     AboutComponent,
     SpotlightComponent,
     ContactusComponent,
+    HackathonTravelFormComponent,
     DialogDataExampleDialog
   ],
   imports: [

@@ -27,7 +27,7 @@ type pageData struct {
 	PageName string
 }
 
-func main() { //main (debug) -> init(deploy) //gcloud app deploy from within the gcloud terminal
+func init() { //main (debug) -> init(deploy) //gcloud app deploy from within the gcloud terminal
 	tmpl = template.Must(template.ParseGlob("pub/*.html"))
 
 	http.HandleFunc("/", index)

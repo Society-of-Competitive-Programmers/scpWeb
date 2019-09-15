@@ -16,7 +16,14 @@ export class GeneralService {
   private baseUrl: string;
 
   constructor(private http: HttpClient, private router: Router){
-    this.baseUrl = this.router.url.split('?')[0].split('/')[0];
+    this.baseUrl = window.location.origin;
+    console.log(window);
+    console.log(this.baseUrl);
+    console.log(this.router.url.split('?')[0].split('/')[0]);
+    if(this.baseUrl === 'http://localhost:4200') {
+      this.baseUrl = 'http://localhost:3001';
+    }
+    console.log(this.baseUrl);
   }
 
   private handleError<T> (operation = 'operation', result?: T) {
@@ -32,7 +39,8 @@ export class GeneralService {
 
   public getSpotlightInfo(): Observable<SpotlightInfo[]> {
     
-    let url = this.baseUrl + "/spotlightInfo"
+    let url = this.baseUrl + "/spotlightInfo";
+    console.log(url);
     
     let options = {
       headers: new HttpHeaders({
@@ -63,8 +71,8 @@ export class GeneralService {
     );
   }
 
-  public getWorkshopInfo(): Observable<Meeting[]> {
-    let url = this.baseUrl + "/workshops"
+  public getMeetingInfo(meetingType: string): Observable<Meeting[]> {
+    let url = this.baseUrl + `/meetings?meetingType=${meetingType}`;
     
     let options = {
       headers: new HttpHeaders({
@@ -78,23 +86,6 @@ export class GeneralService {
       catchError(this.handleError<Meeting[]>(`getSpotlightInfo`))
     );
   }
-
-  public getHPInfo(): Observable<Meeting[]> {
-    let url = this.baseUrl + "/hackathonPrep"
-    
-    let options = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "*", 
-        "Access-Control-Allow-Headers": "access-control-allow-origin, access-control-allow-headers"
-      })
-    };
-    return this.http.get<Meeting[]>(url).pipe(
-      tap(_ => console.log("Fetched Spotlight Info")),
-      catchError(this.handleError<Meeting[]>(`getSpotlightInfo`))
-    );
-  }
-
 
   //Operating Sidenav
   public setSidenav(sidenav: MatSidenav) {

@@ -13,7 +13,6 @@ export class UpcomingHackathon {
   Name: string;
   University: string;
   EventDate: string;
-  Location: string;
   Website:  string;
 }
   

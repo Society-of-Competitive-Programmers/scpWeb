@@ -43,21 +43,16 @@
                     <th mat-header-cell *matHeaderCellDef> Date </th>
                     <td mat-cell *matCellDef="let element"> {{element.EventDate}} </td>
                     </ng-container>
-                
-                    <!-- Symbol Column -->
-                    <ng-container matColumnDef="Location">
-                    <th mat-header-cell *matHeaderCellDef> Location </th>
-                    <td mat-cell *matCellDef="let element"> {{element.Location}} </td>
-                    </ng-container>
-
+            
                     <!-- Symbol Column -->
                     <ng-container matColumnDef="Website">
                     <th mat-header-cell *matHeaderCellDef> Website </th>
-                    <td mat-cell *matCellDef="let element"> {{element.Website}} </td>
+                    <td mat-cell *matCellDef="let element"><a href="{{element.Website}}">{{element.Website}}</a></td>
                     </ng-container>
                 
                     <tr mat-header-row *matHeaderRowDef="UHDisplayedColumns; sticky: true"></tr>
                     <tr mat-row *matRowDef="let row; columns: UHDisplayedColumns;"></tr>
+                    <tr mat-footer-row *matFooterRowDef="[]; sticky: true"></tr>
                 </table>
             </div>
 
@@ -91,6 +86,7 @@
                 
                     <tr mat-header-row *matHeaderRowDef="MeetingDisplayedColumns; sticky: true"></tr>
                     <tr mat-row *matRowDef="let row; columns: MeetingDisplayedColumns;"></tr>
+                    <tr mat-footer-row *matFooterRowDef="[]; sticky: true"></tr>
                 </table>
             </div>
         </mat-tab>
@@ -99,30 +95,31 @@
                 <table mat-table [dataSource]="hackathonPrepSrc">
                     <!-- Position Column -->
                     <ng-container matColumnDef="Workshop Name">
-                            <th mat-header-cell *matHeaderCellDef> Workshop Name </th>
-                            <td mat-cell *matCellDef="let element"> {{element.Title}} </td>
-                            </ng-container>
-                        
-                            <!-- Name Column -->
-                            <ng-container matColumnDef="Room #">
-                            <th mat-header-cell *matHeaderCellDef> Room # </th>
-                            <td mat-cell *matCellDef="let element"> {{element.Location}} </td>
-                            </ng-container>
-                        
-                            <!-- Symbol Column -->
-                            <ng-container matColumnDef="Day of Week">
-                            <th mat-header-cell *matHeaderCellDef> Day of Week </th>
-                            <td mat-cell *matCellDef="let element"> {{element.DayOfWeek}} </td>
-                            </ng-container>
-        
-                            <!-- Symbol Column -->
-                            <ng-container matColumnDef="Date">
-                            <th mat-header-cell *matHeaderCellDef> Date </th>
-                            <td mat-cell *matCellDef="let element"> {{element.EventDay}} </td>
-                            </ng-container>
-                        
-                            <tr mat-header-row *matHeaderRowDef="MeetingDisplayedColumns; sticky: true"></tr>
-                            <tr mat-row *matRowDef="let row; columns: MeetingDisplayedColumns;"></tr>
+                    <th mat-header-cell *matHeaderCellDef> Workshop Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Title}} </td>
+                    </ng-container>
+                
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="Room #">
+                    <th mat-header-cell *matHeaderCellDef> Room # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Location}} </td>
+                    </ng-container>
+                
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="Day of Week">
+                    <th mat-header-cell *matHeaderCellDef> Day of Week </th>
+                    <td mat-cell *matCellDef="let element"> {{element.DayOfWeek}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="Date">
+                    <th mat-header-cell *matHeaderCellDef> Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.EventDay}} </td>
+                    </ng-container>
+                    
+                    <tr mat-header-row *matHeaderRowDef="MeetingDisplayedColumns; sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: MeetingDisplayedColumns;"></tr>
+                    <tr mat-footer-row *matFooterRowDef="[]; sticky: true"></tr>
                 </table>
             </div>
         </mat-tab>

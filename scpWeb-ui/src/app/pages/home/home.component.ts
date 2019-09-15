@@ -9,7 +9,7 @@ import { SpotlightInfo, UpcomingHackathon, Meeting } from 'src/app/core/classes/
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  UHDisplayedColumns = ['Hackathon', 'University', 'Date', 'Location', 'Website'];
+  UHDisplayedColumns = ['Hackathon', 'University', 'Date', 'Website'];
   MeetingDisplayedColumns = ['Workshop Name', 'Room #', 'Day of Week', 'Date'];
   spotlightInfo: SpotlightInfo[] = [];
   upcomingHackathonSrc: UpcomingHackathon[] = [];
@@ -28,12 +28,12 @@ export class HomeComponent implements OnInit {
           this.upcomingHackathonSrc = uh
         );
     
-    this.generalService.getWorkshopInfo()
+    this.generalService.getMeetingInfo('W')
         .subscribe(wkshp => 
           this.workshopSrc = wkshp
         );
 
-    this.generalService.getHPInfo()
+    this.generalService.getMeetingInfo('HP')
         .subscribe(hp => 
           this.hackathonPrepSrc = hp
         );

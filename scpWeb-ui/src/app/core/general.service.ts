@@ -38,7 +38,6 @@ export class GeneralService {
   }
 
   public getSpotlightInfo(): Observable<SpotlightInfo[]> {
-    
     let url = this.baseUrl + "/spotlightInfo";
     console.log(url);
     

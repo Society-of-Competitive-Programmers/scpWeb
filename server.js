@@ -13,7 +13,6 @@ const port = process.env.PORT || 3001;
 app.set('trust proxy', true);
 app.use(express.static(__dirname + '/scpWeb-ui/dist/scpWeb-ui'));
 
-
 app.get('/', (req, res) => res.sendFile(path.join(__dirname)));
 
 app.get("/spotlightInfo", getSpotlightInfo);

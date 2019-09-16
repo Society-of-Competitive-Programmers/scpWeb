@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<mat-progress-bar *ngIf="loading" mode="indeterminate" color='primary'></mat-progress-bar>
+<mat-sidenav-container id="mainSideContainer" [hasBackdrop]="true">
+  <mat-sidenav #sidenav mode="over">
+      <mat-nav-list id="menuList" *ngFor="let route of routes" >
+          <a mat-list-item role="listitem" routerLink="{{route.path}}" routerLinkActive="/{{route.path}}" (click)="toggleSideNav()">
+            <mat-icon style="color: #AF373D">{{route.icon}}</mat-icon>&nbsp;&nbsp;&nbsp;
+            <span>{{route.name}}</span>
+          </a>
+      </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div id="routerContainer">
+      <router-outlet></router-outlet>
+    </div>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>

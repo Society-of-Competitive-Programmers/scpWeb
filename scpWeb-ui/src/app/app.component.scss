@@ -1,0 +1,37 @@
+@import './core/library';
+@import url('https://fonts.googleapis.com/css?family=Orbitron:700,900');
+
+
+
+html, body {
+    min-height: 100%;
+    width: 100%;
+}
+
+#mainSideContainer {
+    min-height: calc(100vh - 70px);
+}
+
+#mainSideContainer mat-sidenav {
+    min-width: 250px;
+    display: inline;
+}
+
+#menuList {
+    padding: 0
+}
+
+div {
+    overflow: inherit;
+}
+
+.progressBar {
+    margin: 0 10px;
+    color: #FFC107;
+    background-color: #FFC107;
+    width: 100%;
+}
+
+#routerContainer {
+    min-height: calc(100vh - 70px);
+}

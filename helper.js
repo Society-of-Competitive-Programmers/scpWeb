@@ -129,6 +129,7 @@ module.exports = {
         upcomingHackathonInfo.push(new UpcomingHackathon('ShellHacks','FIU','September 20-22','https://shellhacks.net/'));
         upcomingHackathonInfo.push(new UpcomingHackathon('HackFSU','FSU','October 18-20','https://hackfsu.com/'));
         upcomingHackathonInfo.push(new UpcomingHackathon('HackGT 6','Georgia Tech','October 25-27','https://2019.hack.gt/'));
+        upcomingHackathonInfo.push(new UpcomingHackathon('PheonixHacks', 'Florida Polytechnic University', 'November 2-3', 'https://phoenixhacks.com/'));
         
         return upcomingHackathonInfo;
     },

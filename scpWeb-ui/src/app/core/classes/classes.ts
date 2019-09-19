@@ -22,3 +22,5 @@ export class Meeting {
   DayOfWeek: string;
   EventDay: string; 
 }
+
+/* TODO: add hackathon travel form class */

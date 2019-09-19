@@ -139,18 +139,27 @@ module.exports = {
         // TODO: GET THIS INFO FROM GOOGLE DRIVE
         let meetingInfoArr = [];
         if(dataToRetrieve === 'W') {
-            meetingInfoArr.push(new Meeting('Intro to Python', 'ENG 03', 'Tuesday', '9/17/19'));
-            meetingInfoArr.push(new Meeting('Intro to JS', 'ENG 03', 'Tuesday', '9/24/19'));
-            meetingInfoArr.push(new Meeting('DApps with Blockstack', 'ENG 03', 'Tuesday', '10/01/2019'));
-            meetingInfoArr.push(new Meeting('Building apps with flutter', 'ENG 03', 'Tuesday', '10/08/2019'));
-            meetingInfoArr.push(new Meeting('Automation with UIPath', 'ENG 03', 'Tuesday', '10/15/2019'));
-            meetingInfoArr.push(new Meeting('Using GCP for beginners', 'ENG 03', 'Tuesday', '10/22/2019'));
-            meetingInfoArr.push(new Meeting('Deploying with Azure', 'ENG 03', 'Tuesday', '10/29/2019'));
-            meetingInfoArr.push(new Meeting('Intro to Raspbberry Pi', 'ENG 03', 'Tuesday', '11/05/19'));
-            meetingInfoArr.push(new Meeting('Machine Learning', 'ENG 03', 'Tuesday', '10/12/2019'));
-            meetingInfoArr.push(new Meeting('Introduction to R', 'ENG 03', 'Tuesday', '10/19/2019'));
+            meetingInfoArr.push(new Meeting('Intro to Python', 'ENB 313', 'Tuesday', '9/17/19'));
+            meetingInfoArr.push(new Meeting('Intro to JS', 'ENB 313', 'Tuesday', '9/24/19'));
+            meetingInfoArr.push(new Meeting('DApps with Blockstack', 'ENB 313', 'Tuesday', '10/01/2019'));
+            meetingInfoArr.push(new Meeting('Building apps with flutter', 'ENB 313', 'Tuesday', '10/08/2019'));
+            meetingInfoArr.push(new Meeting('Automation with UIPath', 'ENB 313', 'Tuesday', '10/15/2019'));
+            meetingInfoArr.push(new Meeting('Using GCP for beginners', 'ENB 313', 'Tuesday', '10/22/2019'));
+            meetingInfoArr.push(new Meeting('Deploying with Azure', 'ENB 313', 'Tuesday', '10/29/2019'));
+            meetingInfoArr.push(new Meeting('Intro to Raspbberry Pi', 'ENB 313', 'Tuesday', '11/05/19'));
+            meetingInfoArr.push(new Meeting('Machine Learning', 'ENB 313', 'Tuesday', '11/12/2019'));
+            meetingInfoArr.push(new Meeting('Introduction to R', 'ENB 313', 'Tuesday', '11/19/2019'));
         } else {
-            meetingInfoArr.push(new Meeting('ShellHacks Prep Meeting', 'ENB 337', 'Thursday', '9/19/19'));
+            meetingInfoArr.push(new Meeting('ShellHacks Prep Meeting', 'ENB 313', 'Thursday', '9/19/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '9/26/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/3/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/10/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/17/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/24/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/31/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '11/7/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '11/14/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '11/21/19'));
         }
         
         

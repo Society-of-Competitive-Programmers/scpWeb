@@ -141,13 +141,13 @@ module.exports = {
         if(dataToRetrieve === 'W') {
             meetingInfoArr.push(new Meeting('Intro to Python', 'ENB 313', 'Tuesday', '9/17/19'));
             meetingInfoArr.push(new Meeting('Intro to JS', 'ENB 313', 'Tuesday', '9/24/19'));
-            meetingInfoArr.push(new Meeting('DApps with Blockstack', 'ENB 313', 'Tuesday', '10/01/2019'));
+            meetingInfoArr.push(new Meeting('Machine Learning', 'ENB 313', 'Tuesday', '10/01/2019'));
             meetingInfoArr.push(new Meeting('Building apps with flutter', 'ENB 313', 'Tuesday', '10/08/2019'));
             meetingInfoArr.push(new Meeting('Automation with UIPath', 'ENB 313', 'Tuesday', '10/15/2019'));
             meetingInfoArr.push(new Meeting('Using GCP for beginners', 'ENB 313', 'Tuesday', '10/22/2019'));
             meetingInfoArr.push(new Meeting('Deploying with Azure', 'ENB 313', 'Tuesday', '10/29/2019'));
             meetingInfoArr.push(new Meeting('Intro to Raspbberry Pi', 'ENB 313', 'Tuesday', '11/05/19'));
-            meetingInfoArr.push(new Meeting('Machine Learning', 'ENB 313', 'Tuesday', '11/12/2019'));
+            meetingInfoArr.push(new Meeting('DApps with Blockstack', 'ENB 313', 'Tuesday', '11/12/2019'));
             meetingInfoArr.push(new Meeting('Introduction to R', 'ENB 313', 'Tuesday', '11/19/2019'));
         } else {
             meetingInfoArr.push(new Meeting('ShellHacks Prep Meeting', 'ENB 313', 'Thursday', '9/19/19'));

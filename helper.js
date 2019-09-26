@@ -151,15 +151,15 @@ module.exports = {
             meetingInfoArr.push(new Meeting('Introduction to R', 'ENB 313', 'Tuesday', '11/19/2019'));
         } else {
             meetingInfoArr.push(new Meeting('ShellHacks Prep Meeting', 'ENB 313', 'Thursday', '9/19/19'));
-            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '9/26/19'));
-            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/3/19'));
-            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/10/19'));
-            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/17/19'));
-            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/24/19'));
-            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '10/31/19'));
-            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '11/7/19'));
-            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '11/14/19'));
-            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'TBD', 'Thursday', '11/21/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'ENB 313', 'Thursday', '9/26/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'ENB 313', 'Thursday', '10/3/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'ENB 313', 'Thursday', '10/10/19'));
+            meetingInfoArr.push(new Meeting('HackFSU Prep Meeting', 'ENB 313', 'Thursday', '10/17/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'ENB 313', 'Thursday', '10/24/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'ENB 313', 'Thursday', '10/31/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'ENB 313', 'Thursday', '11/7/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'ENB 313', 'Thursday', '11/14/19'));
+            meetingInfoArr.push(new Meeting('Hackathon Prep Meeting', 'ENB 313', 'Thursday', '11/21/19'));
         }
         
         

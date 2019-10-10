@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   routes = [
     {name: "Home", icon: "home",path:"home"},
     {name: "About", icon: "info", path:"about"},
-    {name: "Spotlight", icon:"assistant_photo", path:"spotlight"},
+    {name: "Spotlight", icon:"star", path:"spotlight"},
     {name: "Contact Us", icon:"email", path:"contact-us"},
     //{name: "Hackathon Travel Form", icon:"code", path:"hackathon-travel-form"} // todo: checkout what icon is...
   ]
